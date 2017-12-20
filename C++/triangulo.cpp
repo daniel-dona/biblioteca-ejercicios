@@ -31,17 +31,72 @@ int leer_entero(){
     
 }
 
+void imprimir_numero(int n){
+    
+    if(n < 10){
+        
+        cout << "  " << n;
+        
+    }else{
+        
+        cout << " " << n;
+        
+    }
+    
+}
+
 void triangulo(int n){
 
     int ancho = n * 2;
     
     int alto = n;
     
-    for(int i = 0; i < alto; i++){
+    int num;
     
-        for(int j = 0; j < ancho; j++){
+    for(int i = 0; i <= alto; i++){
         
+        num = i;
+    
+        for(int j = 1; j < (ancho+2); j++){
+            
+            if(j < (n+2)){
+                
+                num++;
+                
+            }else{
+                
+                num--;
+                
+            }
+            
+            if(num <= n){
+            
+                imprimir_numero(num);
+                
+            }else{
+                
+                if(j != (n+1)){
+                
+                    cout << "   ";
+                    
+                }
+                
+            }
         
+        }
+        
+        cout << endl;
+        
+    }
 
 
+}
+
+
+int main(){
+    
+    int n = leer_entero();
+    
+    triangulo(n);
+    
 }
