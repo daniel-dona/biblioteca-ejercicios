@@ -53,7 +53,7 @@ void triangulo(int n){
     
     int num;
     
-    for(int i = 0; i <= alto; i++){
+    for(int i = 0; i < alto; i++){
         
         num = i;
     
